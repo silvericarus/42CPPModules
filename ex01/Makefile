@@ -12,16 +12,18 @@
 
 SRCS 		=	\
 			Contact.hpp \
+			Contact.cpp \
 			PhoneBook.hpp \
+			PhoneBook.cpp \
 			ft_phone.cpp \
 
 OBJS		=	$(SRCS:.cpp=.o)
-NAME		=	ft_phonebook
+NAME		=	ft_phone
 CC			=	g++
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -f
 
-all:	$(NAME)
+all: $(NAME)
 
 %.o: %.cpp
 		$(CC) $(CFLAGS) -c $< -o $@
@@ -30,7 +32,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-		$(RM) $(OBJS)
+		$(RM) *.o
 
 fclean: clean
 		$(RM) $(NAME)

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: albgonza <albgonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/16 19:40:00 by albgonza          #+#    #+#             */
-/*   Updated: 2023/06/16 19:54:49 by albgonza         ###   ########.fr       */
+/*   Created: 2023/06/17 01:03:29 by albgonza          #+#    #+#             */
+/*   Updated: 2023/06/17 01:03:29 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ class Contact
 	public:
 			Contact(int fields);
 			Contact();
-			void print(void);
-			std::string	_field_id[5] = {"first name","last name","nickname","phone number","darkest secret"};
-
+			void	print(void);
+			bool	is_empty(void);
+			void	set_contact();
+			static std::string	_field_id[5];
 	private:
 			std::string	_field_content[6];
 };
