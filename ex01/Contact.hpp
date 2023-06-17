@@ -20,10 +20,11 @@ class Contact
 	public:
 			Contact(int fields);
 			Contact();
-			void	print(void);
-			bool	is_empty(void);
-			void	set_contact();
 			static std::string	_field_id[5];
+			std::string	get_content(int index);
+			void		print(void);
+			bool		is_empty(void);
+			void		set_contact();
 	private:
 			std::string	_field_content[6];
 };

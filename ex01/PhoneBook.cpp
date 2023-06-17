@@ -46,8 +46,15 @@ void	PhoneBook::add_contact(void)
 	else
 	{
 		_storage[i].set_contact();
-		std::cout << "Contact added" << std::endl;
+		std::cout << "Contact added!" << std::endl;
 	}
+}
+
+std::string	PhoneBook::truncate(std::string str, size_t width)
+{
+	if (str.length() > width)
+		return (str.substr(0, width - 1) + ".");
+	return (str);
 }
 
 void	PhoneBook::search_contact(void)
@@ -64,16 +71,18 @@ void	PhoneBook::search_contact(void)
 		std::cout << std::setw(10) << "First Name" << "|";
 		std::cout << std::setw(10) << "Last Name" << "|";
 		std::cout << std::setw(10) << "Nickname" << std::endl;
-		while (i < 8 && _storage[i].is_empty() == false)
+		while (i < 7 && PhoneBook::_storage[i].is_empty() == false)
 		{
-			std::cout << std::setw(10) << i << "|";
-			_storage[i].print();
+			std::cout << std::setw(10) << std::right << i << "|";
+			std::cout << std::setw(10) << std::right << PhoneBook::truncate(PhoneBook::_storage[i].get_content(0), 10) << "|";
+			std::cout << std::setw(10) << std::right << PhoneBook::truncate(PhoneBook::_storage[i].get_content(1), 10) << "|";
+			std::cout << std::setw(10) << std::right << PhoneBook::truncate(PhoneBook::_storage[i].get_content(2), 10) << std::endl;
 			i++;
 		}
 		std::cout << "Enter index: ";
 		std::getline(std::cin, input);
 		index = atoi(input.c_str());
-		if (index >= 0 && index < 8 && _storage[index].is_empty() == false)
+		if (index >= 0 && index < 8 && PhoneBook::_storage[index].is_empty() == false)
 			print_contact(index);
 		else
 			std::cout << "Invalid index" << std::endl;

@@ -14,6 +14,8 @@
 # define PHONEBOOK_HPP
 # include <iostream>
 # include <iomanip>
+# include <cstdlib>
+# include <string>
 # include "Contact.hpp"
 
 class PhoneBook
@@ -25,6 +27,8 @@ class PhoneBook
 			void	search_contact(void);
 			void	print_contact(int index);
 			void	set_command(std::string command, int index);
+			std::string	truncate(std::string, size_t width);
+
 	private:
 			std::string	_commands[3];
 			Contact		_storage[8];

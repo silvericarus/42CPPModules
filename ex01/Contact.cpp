@@ -46,3 +46,8 @@ void	Contact::set_contact()
 	}
 }
 
+std::string	Contact::get_content(int index)
+{
+	return (Contact::_field_content[index]);
+}
+
