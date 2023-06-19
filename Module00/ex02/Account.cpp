@@ -6,12 +6,14 @@
 /*   By: albgonza <albgonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 20:01:31 by albgonza          #+#    #+#             */
-/*   Updated: 2023/06/17 20:01:31 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/06/19 19:11:36 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
+#include <iomanip>
+#include <ctime>
 
 int		Account::_nbAccounts = 0;
 int		Account::_totalAmount = 0;
@@ -20,14 +22,15 @@ int		Account::_totalNbWithdrawals = 0;
 Account::Account( int initial_deposit ) : _amount(initial_deposit)
 {
 	Account::_displayTimestamp();
+	this->_nbAccounts++;
+	this->_accountIndex = this->_nbAccounts - 1;
 	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";created" << std::endl;
-	Account::_nbAccounts++;
 	Account::_totalAmount += this->_amount;
 }
 
 Account::~Account( void )
 {
-	Account::_displayTimestamp();
+	Account::_displayTimestamp();	
 	std::cout << "index:" << this->_accountIndex << ";amount:" << this->_amount << ";closed" << std::endl;
 	Account::_nbAccounts--;
 	Account::_totalAmount -= this->_amount;
@@ -43,7 +46,19 @@ Account::Account( void )
 
 void	Account::_displayTimestamp( void )
 {
-	std::cout << "[19920104_091532] ";
+	std::time_t	time;
+
+	time = std::time(NULL);
+	std::cout << std::setfill('0') <<
+ 	"[" <<
+	std::localtime(&time)->tm_year <<
+	std::localtime(&time)->tm_mon <<
+	std::localtime(&time)->tm_mday <<
+	"_" <<
+	std::localtime(&time)->tm_hour <<
+	std::localtime(&time)->tm_min <<
+	std::localtime(&time)->tm_sec
+	<< "] ";
 }
 
 int		Account::getNbAccounts( void )
