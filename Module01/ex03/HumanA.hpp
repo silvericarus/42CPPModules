@@ -15,10 +15,10 @@
 class HumanA
 {
 	private:
-		Weapon	weapon;
+		Weapon	*weapon;
 		std::string	name;
 	public:
-		HumanA(std::string, Weapon&);
+		HumanA(std::string, Weapon &);
 		~HumanA();
 		void	attack(void);
 };

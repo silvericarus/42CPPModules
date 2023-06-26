@@ -15,7 +15,6 @@
 Weapon::Weapon()
 {
 	std::cout << "Weapon created" << std::endl;
-
 }
 
 Weapon::Weapon(std::string type)
