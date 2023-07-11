@@ -15,10 +15,10 @@
 
 int	main(void)
 {
-	ScavTrap	scavTrap("scavTrap");
+	ScavTrap	Scav("Scav");
+	ScavTrap	Scav2("Scav2");
 
-	scavTrap.attack("target");
-	scavTrap.takeDamage(5);
-	scavTrap.beRepaired(5);
+	Scav.attack("Scav2");
+	Scav.guardGate();
 	return (0);
 }

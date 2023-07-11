@@ -17,11 +17,14 @@
 
 class ScavTrap : public ClapTrap
 {
-
-	
+	private:
+		std::string	_name;
+		int	_hp;
+		int	_ep;
+		int	_damage;
 	public:
-		explicit ScavTrap(std::string name) : ClapTrap(name){}
-		explicit ~ScavTrap() : ~ClapTrap(){}
+		ScavTrap(std::string name);
+		~ScavTrap();
 		void	attack(const std::string& target);
 		void	guardGate();
 };

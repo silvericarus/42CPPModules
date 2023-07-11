@@ -12,8 +12,10 @@
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+
+	std::cout << "ScavTrap " << name << " created" << std::endl;
 	this->_name = name;
 	this->_hp = 100;
 	this->_ep = 50;
@@ -25,10 +27,10 @@ ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap " << this->_name << " destroyed" << std::endl;
 }
+
 void	ScavTrap::attack(const std::string& target)
 {
 	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_damage << " points of damage!" << std::endl;
-	return ;
 }
 
 void	ScavTrap::guardGate(void)
