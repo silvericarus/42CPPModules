@@ -16,7 +16,6 @@
 int	main(void)
 {
 	ScavTrap	Scav("Scav");
-	ScavTrap	Scav2("Scav2");
 
 	Scav.attack("Scav2");
 	Scav.guardGate();
