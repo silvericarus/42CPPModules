@@ -22,6 +22,9 @@ class ClapTrap
 		unsigned int	_damage;
 	public:
 		ClapTrap(std::string name);
+		ClapTrap(const ClapTrap &claptrap);
+		ClapTrap	&operator=(const ClapTrap &claptrap);
+		ClapTrap();
 		~ClapTrap();
 		void		attack(const std::string& target);
 		void		takeDamage(unsigned int amount);
