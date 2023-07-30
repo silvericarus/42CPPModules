@@ -24,7 +24,10 @@ class Point
 		Point(const float x, const float y);
 		~Point();
 		Point	&operator=(const Point &point);
+		bool	operator==(const Point &point) const;
+		bool	operator!=(const Point &point) const;
 		float	getX() const;
 		float	getY() const;
 };
+std::ostream	&operator<<( std::ostream &ostream, Point const &point );
 #endif

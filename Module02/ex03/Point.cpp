@@ -38,6 +38,22 @@ Point	&Point::operator=(const Point &point)
 	return (*this);
 }
 
+std::ostream	&operator<<( std::ostream &ostream, Point const &point )
+{
+	ostream << "(" << point.getX() << ", " << point.getY() << ")";
+	return ostream;
+}
+
+bool	Point::operator==(const Point &point) const
+{
+	return (this->_x == point._x && this->_y == point._y);
+}
+
+bool	Point::operator!=(const Point &point) const
+{
+	return (this->_x != point._x || this->_y != point._y);
+}
+
 float	Point::getX() const
 {
 	return (this->_x.toFloat());
