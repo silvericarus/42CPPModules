@@ -22,10 +22,30 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	return ;
 }
 
+FragTrap::FragTrap(const FragTrap &fragtrap)
+{
+	*this = fragtrap;
+	return ;
+}
+
+FragTrap::FragTrap()
+{
+	return ;
+}
+
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap " << this->_name << " is destroyed" << std::endl;
 	return ;
+}
+
+FragTrap	&FragTrap::operator=(const FragTrap &fragtrap)
+{
+	this->_name = fragtrap._name;
+	this->_hp = fragtrap._hp;
+	this->_ep = fragtrap._ep;
+	this->_damage = fragtrap._damage;
+	return (*this);
 }
 
 void	FragTrap::highFivesGuys(void)

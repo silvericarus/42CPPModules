@@ -23,9 +23,29 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	return ;
 }
 
+ScavTrap::ScavTrap(const ScavTrap &scavtrap)
+{
+	*this = scavtrap;
+	return ;
+}
+
+ScavTrap::ScavTrap()
+{
+	return ;
+}
+
 ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap " << this->_name << " destroyed" << std::endl;
+}
+
+ScavTrap	&ScavTrap::operator=(const ScavTrap &scavtrap)
+{
+	this->_name = scavtrap._name;
+	this->_hp = scavtrap._hp;
+	this->_ep = scavtrap._ep;
+	this->_damage = scavtrap._damage;
+	return (*this);
 }
 
 void	ScavTrap::attack(const std::string& target)

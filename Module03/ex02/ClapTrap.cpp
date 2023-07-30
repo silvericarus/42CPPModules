@@ -21,9 +21,29 @@ ClapTrap::ClapTrap(std::string name)
 	return ;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &claptrap)
+{
+	*this = claptrap;
+	return ;
+}
+
+ClapTrap::ClapTrap()
+{
+	return ;
+}
+
 ClapTrap::~ClapTrap()
 {
 	return ;
+}
+
+ClapTrap	&ClapTrap::operator=(const ClapTrap &claptrap)
+{
+	this->_name = claptrap._name;
+	this->_hp = claptrap._hp;
+	this->_ep = claptrap._ep;
+	this->_damage = claptrap._damage;
+	return (*this);
 }
 
 void	ClapTrap::attack(const std::string& target)
