@@ -15,7 +15,7 @@ SRCS 		=	megaphone.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 NAME		=	megaphone
 CC			=	g++
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -f
 
 all:	$(NAME)
