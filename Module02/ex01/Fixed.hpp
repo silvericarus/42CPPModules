@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FIXED_HPP
+# define FIXED_HPP
 #include <iostream>
 #include <cmath>
 
@@ -31,3 +33,4 @@ class	Fixed
 		int		toInt(void) const;
 };
 std::ostream	&operator<<( std::ostream &ostream, Fixed const &fixed );
+#endif
