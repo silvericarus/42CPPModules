@@ -29,6 +29,17 @@ ScavTrap::ScavTrap(const ScavTrap &scavtrap)
 	return ;
 }
 
+std::string	ScavTrap::getName(void) const
+{
+	return (this->_name);
+}
+
+std::ostream	&operator<<( std::ostream &ostream, ScavTrap const &scavtrap )
+{
+	ostream << scavtrap.getName();
+	return (ostream);
+}
+
 ScavTrap::ScavTrap()
 {
 	return ;

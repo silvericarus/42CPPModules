@@ -48,6 +48,17 @@ FragTrap	&FragTrap::operator=(const FragTrap &fragtrap)
 	return (*this);
 }
 
+std::ostream	&operator<<( std::ostream &ostream, FragTrap const &fragtrap )
+{
+	ostream << fragtrap.getName();
+	return (ostream);
+}
+
+std::string	FragTrap::getName(void) const
+{
+	return (this->_name);
+}
+
 void	FragTrap::highFivesGuys(void)
 {
 	std::cout << "FragTrap " << this->_name << " wants to high five" << std::endl;

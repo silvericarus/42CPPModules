@@ -32,5 +32,7 @@ class FragTrap : public ClapTrap
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 		void	highFivesGuys(void);
+		std::string	getName(void) const;
 };
+std::ostream	&operator<<( std::ostream &ostream, FragTrap const &fragtrap );
 #endif

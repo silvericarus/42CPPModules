@@ -48,6 +48,17 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &scavtrap)
 	return (*this);
 }
 
+std::ostream	&operator<<( std::ostream &ostream, ScavTrap const &scavtrap )
+{
+	ostream << scavtrap.getName();
+	return (ostream);
+}
+
+std::string	ScavTrap::getName(void) const
+{
+	return (this->_name);
+}
+
 void	ScavTrap::attack(const std::string& target)
 {
 	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_damage << " points of damage!" << std::endl;
