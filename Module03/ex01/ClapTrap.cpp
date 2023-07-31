@@ -46,6 +46,17 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &claptrap)
 	return (*this);
 }
 
+std::ostream	&operator<<( std::ostream &ostream, ClapTrap const &claptrap )
+{
+	ostream << claptrap.getName();
+	return (ostream);
+}
+
+std::string	ClapTrap::getName(void) const
+{
+	return (this->_name);
+}
+
 void	ClapTrap::attack(const std::string& target)
 {
 	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_damage << " points of damage!" << std::endl;

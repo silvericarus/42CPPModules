@@ -29,5 +29,7 @@ class ScavTrap : public ClapTrap
 		ScavTrap	&operator=(const ScavTrap &scavtrap);
 		void	attack(const std::string& target);
 		void	guardGate();
+		std::string	getName(void) const;
 };
+std::ostream	&operator<<( std::ostream &ostream, ScavTrap const &scavtrap );
 #endif
