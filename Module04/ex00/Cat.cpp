@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/14 18:33:36 by albgonza          #+#    #+#             */
-/*   Updated: 2023/08/03 19:11:39 by albgonza         ###   ########.fr       */
+/*   Created: 2023/08/03 18:19:07 by albgonza          #+#    #+#             */
+/*   Updated: 2023/08/03 18:22:29 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
-#include "Dog.hpp"
 #include "Cat.hpp"
 
-int main()
+Cat::Cat() : Animal()
 {
-    WrongAnimal* meta = new WrongAnimal();
-    Dog* j = new Dog();
-    WrongCat* k = new WrongCat();
-    std::cout << "Dog type: " << j->getType() << std::endl;
-    std::cout << "Cat type: " << k->getType() << std::endl;
-    j->makeSound();
-    k->makeSound();
-    meta->makeSound();
-    return 0;
+    Animal::setType("CAT");
+    std::cout << "a cat appeared!" << std::endl;
+    return ;
+}
+
+Cat::~Cat()
+{
+    std::cout << "the cat disappeared!" << std::endl;
+}
+
+std::string Cat::getType()
+{
+    return Animal::getType();
+}
+
+void    Cat::setType(std::string str)
+{
+    Animal::setType(str);
+}
+
+void    Cat::makeSound()
+{
+    std::cout << "the cat made a sound, meow!" << std::endl;
 }

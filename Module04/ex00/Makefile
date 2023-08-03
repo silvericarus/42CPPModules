@@ -6,7 +6,7 @@
 #    By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/27 23:02:36 by albgonza          #+#    #+#              #
-#    Updated: 2023/07/14 18:54:15 by albgonza         ###   ########.fr        #
+#    Updated: 2023/08/03 18:43:01 by albgonza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,12 @@ SRCS 		=	\
 			Animal.cpp \
 			Dog.hpp \
 			Dog.cpp \
+			Cat.hpp \
+			Cat.cpp \
+			WrongCat.hpp \
+			WrongCat.cpp \
+			WrongAnimal.hpp \
+			WrongAnimal.cpp \
 			main.cpp \
 
 OBJS		=	$(SRCS:.cpp=.o)

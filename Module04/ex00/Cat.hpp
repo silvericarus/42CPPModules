@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/14 18:16:09 by albgonza          #+#    #+#             */
-/*   Updated: 2023/07/14 18:40:12 by albgonza         ###   ########.fr       */
+/*   Created: 2023/08/03 18:15:36 by albgonza          #+#    #+#             */
+/*   Updated: 2023/08/03 18:24:29 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-#include <iostream>
-
-class Animal
+#include "Animal.hpp"
+class Cat : protected Animal
 {
     protected:
         std::string type;
     public:
-        Animal();
-        ~Animal();
+        Cat();
+        ~Cat();
         std::string getType();
         void    setType(std::string);
-        virtual void    makeSound();
+        void    makeSound();
 };
 
 #endif
