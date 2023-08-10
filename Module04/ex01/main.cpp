@@ -19,7 +19,12 @@
 int main()
 {
     Animal *animal = new Animal();
+    Cat *cat = new Cat();
     animal->brain->setIdea(0, "A random idea in an animal head!!!!!!!!!");
+    cat->brain->setIdea(42, "A random idea in a cat head!!!!!!!!!");
     std::cout << animal->brain->getIdea(0) << std::endl;
+    std::cout << animal->brain->getIdea(1) << std::endl;
+    std::cout << cat->brain->getIdea(42) << std::endl;
+    std::cout << cat->brain->getIdea(0) << std::endl;
     return 0;
 }

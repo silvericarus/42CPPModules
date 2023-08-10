@@ -16,12 +16,14 @@ WrongCat::WrongCat() : WrongAnimal()
 {
     WrongAnimal::setType("CAT");
     std::cout << "a cat appeared!" << std::endl;
+    WrongCat::brain = new Brain();
     return ;
 }
 
 WrongCat::~WrongCat()
 {
     std::cout << "the cat disappeared!" << std::endl;
+    delete WrongCat::brain;
 }
 
 std::string WrongCat::getType()

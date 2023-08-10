@@ -19,6 +19,7 @@ class Cat : protected Animal
     protected:
         std::string type;
     public:
+        Brain *brain;
         Cat();
         ~Cat();
         std::string getType();

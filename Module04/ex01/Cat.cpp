@@ -16,12 +16,14 @@ Cat::Cat() : Animal()
 {
     Animal::setType("CAT");
     std::cout << "a cat appeared!" << std::endl;
+    Cat::brain = new Brain();
     return ;
 }
 
 Cat::~Cat()
 {
     std::cout << "the cat disappeared!" << std::endl;
+    delete Cat::brain;
 }
 
 std::string Cat::getType()

@@ -14,12 +14,14 @@
 # define WRONGANIMAL_HPP
 
 #include <iostream>
+#include "Brain.hpp"
 
 class WrongAnimal
 {
     protected:
         std::string type;
     public:
+        Brain   *brain;
         WrongAnimal();
         ~WrongAnimal();
         std::string getType();

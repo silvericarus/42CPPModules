@@ -19,6 +19,7 @@ class WrongCat : public WrongAnimal
     protected:
         std::string type;
     public:
+        Brain   *brain;
         WrongCat();
         ~WrongCat();
         std::string getType();

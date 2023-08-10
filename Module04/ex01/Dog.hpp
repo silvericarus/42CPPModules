@@ -20,6 +20,7 @@ class Dog : protected Animal
     protected:
         std::string type;
     public:
+        Brain   *brain;
         Dog();
         ~Dog();
         std::string getType();

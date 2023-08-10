@@ -16,12 +16,14 @@ Dog::Dog() : Animal()
 {
     Animal::setType("DOG");
     std::cout << "a dog appeared!" << std::endl;
+    Dog::brain = new Brain();
     return ;
 }
 
 Dog::~Dog()
 {
     std::cout << "the dog disappeared!" << std::endl;
+    delete Dog::brain;
 }
 
 std::string Dog::getType()

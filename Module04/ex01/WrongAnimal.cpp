@@ -16,12 +16,14 @@ WrongAnimal::WrongAnimal()
 {
     this->setType("EMPTY");
     std::cout << "an animal has appeared!" << std::endl;
+    WrongAnimal::brain = new Brain();
     return ;
 }
 
 WrongAnimal::~WrongAnimal()
 {
     std::cout << "the animal disappeared!" << std::endl;
+    delete WrongAnimal::brain;
 }
 
 std::string WrongAnimal::getType()
