@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:16:09 by albgonza          #+#    #+#             */
-/*   Updated: 2023/08/08 18:02:20 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 20:44:50 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ class Animal
         void    setType(std::string);
         virtual void    makeSound();
 };
-
+std::ostream	&operator<<( std::ostream &ostream, Animal const &animal );
 #endif

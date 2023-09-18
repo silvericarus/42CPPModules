@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:19:07 by albgonza          #+#    #+#             */
-/*   Updated: 2023/08/03 18:22:29 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 20:33:34 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,10 @@ void    Cat::setType(std::string str)
 void    Cat::makeSound()
 {
     std::cout << "the cat made a sound, meow!" << std::endl;
+}
+
+std::ostream	&operator<<( std::ostream &ostream, Cat const &cat )
+{
+    ostream << cat->getType();
+    return (ostream);
 }

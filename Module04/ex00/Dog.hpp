@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:42:30 by albgonza          #+#    #+#             */
-/*   Updated: 2023/07/14 18:59:06 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 20:34:44 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ class Dog : protected Animal
         void    setType(std::string);
         void    makeSound();
 };
-
+std::ostream	&operator<<( std::ostream &ostream, Dog const &dog );
 #endif

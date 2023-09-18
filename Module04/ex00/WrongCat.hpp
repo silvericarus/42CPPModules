@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:15:36 by albgonza          #+#    #+#             */
-/*   Updated: 2023/08/03 19:06:14 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 20:38:28 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ class WrongCat : public WrongAnimal
         void    setType(std::string);
         void    makeSound();
 };
-
+std::ostream	&operator<<( std::ostream &ostream, WrongCat const &cat );
 #endif

@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 17:40:19 by albgonza          #+#    #+#             */
-/*   Updated: 2023/08/08 18:07:23 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 20:50:21 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ class Brain
         void setIdea(int, std::string);
         std::string* getIdeas();
 };
+std::ostream	&operator<<( std::ostream &ostream, Brain const &brain );
 #endif

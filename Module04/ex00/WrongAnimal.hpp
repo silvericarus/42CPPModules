@@ -26,5 +26,5 @@ class WrongAnimal
         void    setType(std::string);
         void    makeSound();
 };
-
+std::ostream	&operator<<( std::ostream &ostream, WrongAnimal const &animal );
 #endif
