@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 17:54:55 by albgonza          #+#    #+#             */
-/*   Updated: 2023/08/08 18:07:57 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 20:48:33 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,10 @@ void Brain::setIdea(int i, std::string idea)
 std::string* Brain::getIdeas()
 {
     return (ideas);
+}
+
+std::ostream	&operator<<( std::ostream &ostream, Brain const &brain )
+{
+    ostream << brain->getIdea(0);
+    return (ostream);
 }

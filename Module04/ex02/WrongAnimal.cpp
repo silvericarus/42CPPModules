@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:22:57 by albgonza          #+#    #+#             */
-/*   Updated: 2023/08/03 18:41:47 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 20:49:32 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,10 @@ void WrongAnimal::setType(std::string str)
 void WrongAnimal::makeSound()
 {
     std::cout << "the animal made a sound!" << std::endl;
+}
+
+std::ostream	&operator<<( std::ostream &ostream, WrongAnimal const &animal )
+{
+    ostream << animal->getType();
+    return (ostream);
 }

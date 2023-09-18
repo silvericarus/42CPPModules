@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:46:32 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/18 19:46:44 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 20:49:17 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,10 @@ void    Dog::setType(std::string str)
 void    Dog::makeSound()
 {
     std::cout << "the dog made a sound, woof!" << std::endl;
+}
+
+std::ostream	&operator<<( std::ostream &ostream, Dog const &dog )
+{
+    ostream << dog->getType();
+    return (ostream);
 }
