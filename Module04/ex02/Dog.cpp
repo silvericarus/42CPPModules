@@ -6,15 +6,16 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:46:32 by albgonza          #+#    #+#             */
-/*   Updated: 2023/07/14 18:56:49 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 19:46:44 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog()
 {
-    Animal::setType("DOG");
+    Animal& instance = Animal::getInstance();
+    instance.setType("DOG");
     std::cout << "a dog appeared!" << std::endl;
     Dog::brain = new Brain();
     return ;

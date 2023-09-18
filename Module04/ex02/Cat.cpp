@@ -6,15 +6,16 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:19:07 by albgonza          #+#    #+#             */
-/*   Updated: 2023/08/03 18:22:29 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 19:43:26 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat()
 {
-    Animal::setType("CAT");
+    Animal& instance = Animal::getInstance();
+    instance.setType("CAT");
     std::cout << "a cat appeared!" << std::endl;
     Cat::brain = new Brain();
     return ;

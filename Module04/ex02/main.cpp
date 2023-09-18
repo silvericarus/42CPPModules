@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:33:36 by albgonza          #+#    #+#             */
-/*   Updated: 2023/08/08 18:08:44 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/18 19:49:23 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,11 @@
 
 int main()
 {
-    Animal *animal = new Animal();
     Cat *cat = new Cat();
-    animal->brain->setIdea(0, "A random idea in an animal head!!!!!!!!!");
+    Dog *dog = new Dog();
+    dog->brain->setIdea(21, "A random idea in a dog head!!!!!!!!!");
     cat->brain->setIdea(42, "A random idea in a cat head!!!!!!!!!");
-    std::cout << animal->brain->getIdea(0) << std::endl;
-    std::cout << animal->brain->getIdea(1) << std::endl;
     std::cout << cat->brain->getIdea(42) << std::endl;
-    std::cout << cat->brain->getIdea(0) << std::endl;
+    std::cout << dog->brain->getIdea(21) << std::endl;
     return 0;
 }
