@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 17:40:19 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/18 20:50:21 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/19 21:08:02 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Brain
     public:
         Brain();
         ~Brain();
+        Brain &operator=(const Brain &brain);
         std::string getIdea(int);
         void setIdea(int, std::string);
         std::string* getIdeas();

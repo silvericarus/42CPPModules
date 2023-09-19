@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:42:30 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/18 20:44:09 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/19 20:56:28 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Dog : protected Animal
         Brain   *brain;
         Dog();
         ~Dog();
+        Dog &operator=(const Dog &dog);
         std::string getType();
         void    setType(std::string);
         void    makeSound();
