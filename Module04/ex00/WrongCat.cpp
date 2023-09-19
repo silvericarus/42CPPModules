@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:19:07 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 20:52:24 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/19 21:27:34 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 WrongCat::WrongCat() : WrongAnimal()
 {
     WrongAnimal::setType("CAT");
+    std::cout << "a cat appeared!" << std::endl;
+    return ;
+}
+
+WrongCat::WrongCat(WrongCat const &other) : WrongAnimal(&other)
+{
+    WrongAnimal::setType(other->getType());
     std::cout << "a cat appeared!" << std::endl;
     return ;
 }

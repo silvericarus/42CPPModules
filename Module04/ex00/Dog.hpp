@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:42:30 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 20:31:12 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/19 21:26:17 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Dog : protected Animal
         std::string type;
     public:
         Dog();
+        Dog(Dog const &);
         ~Dog();
         Dog &operator=(const Dog &dog);
         std::string getType();

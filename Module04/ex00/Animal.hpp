@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:16:09 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/18 20:57:18 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/19 21:16:35 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Animal
         std::string type;
     public:
         Animal();
+        Animal(Animal const &);
         ~Animal();
         Animal &operator=(const Animal &animal);
         std::string getType();
