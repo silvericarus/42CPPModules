@@ -24,6 +24,7 @@ class WrongAnimal
         Brain   *brain;
         WrongAnimal();
         ~WrongAnimal();
+        WrongAnimal &operator=(const WrongAnimal &wronganimal);
         std::string getType();
         void    setType(std::string);
         void    makeSound();
