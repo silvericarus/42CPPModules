@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:15:36 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/18 20:51:07 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/19 20:58:33 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class WrongCat : public WrongAnimal
         Brain   *brain;
         WrongCat();
         ~WrongCat();
+        WrongCat &operator=(const WrongCat &wrongcat);
         std::string getType();
         void    setType(std::string);
         void    makeSound();

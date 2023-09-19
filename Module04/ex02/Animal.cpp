@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:22:57 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/18 20:48:11 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/19 21:06:31 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,10 @@ std::ostream	&operator<<( std::ostream &ostream, Animal const &animal )
 {
     ostream << animal.getType();
     return (ostream);
+}
+
+Animal  &operator=(const Animal &animal)
+{
+    this->setType(animal.getType());
+    return(*this);
 }
