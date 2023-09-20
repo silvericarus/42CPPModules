@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: albgonza <albgonza@student.42malaga.com    +#+  +:+       +#+         #
+#    By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/16 18:51:13 by albgonza          #+#    #+#              #
-#    Updated: 2023/06/16 19:42:33 by albgonza         ###   ########.fr        #
+#    Updated: 2023/09/20 20:34:48 by albgonza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SRCS 		=	\
 			PhoneBook.cpp \
 			ft_phone.cpp \
 
-OBJS		=	$(SRCS:.cpp=.o)
+OBJS_A		=	$(SRCS:.cpp=.o)
+OBJS		=	$(filter-out %.hpp,$(OBJS_A))
 NAME		=	ft_phone
 CC			=	g++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
@@ -37,4 +38,4 @@ clean:
 fclean: clean
 		$(RM) $(NAME)
 
-re: fclean all
+re: fclean clean all
