@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:15:36 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 20:29:39 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/19 21:19:41 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Cat : protected Animal
         std::string type;
     public:
         Cat();
+        Cat(Cat const &);
         ~Cat();
         Cat &operator=(const Cat &cat);
         std::string getType();

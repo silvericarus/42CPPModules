@@ -6,13 +6,18 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:22:57 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 21:06:31 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:57:22 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal()
+{
+    return ;
+}
+
+Animal::Animal(Animal const &other)
 {
     return ;
 }

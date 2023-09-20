@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:16:09 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 21:06:01 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:56:35 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Animal
     protected:
         std::string type;
         Animal();
+        Animal(Animal const &);
     public:
         Brain *brain;
         ~Animal();

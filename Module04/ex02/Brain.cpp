@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 17:54:55 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 21:07:33 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:58:23 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 Brain::Brain()
 {
+    return ;
+}
+
+Brain::Brain(Brain const &other)
+{
+    this->setIdeas(other->getIdeas());
     return ;
 }
 

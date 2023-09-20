@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:15:36 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 21:09:13 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:01:01 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Cat : protected Animal
     public:
         Brain *brain;
         Cat();
+        Cat(Cat const &);
         ~Cat();
         Cat &operator=(const Cat &cat);
         std::string getType();
