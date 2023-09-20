@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:19:07 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 20:55:35 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:18:23 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@ Cat::Cat() : Animal()
     Animal::setType("CAT");
     std::cout << "a cat appeared!" << std::endl;
     Cat::brain = new Brain();
+    return ;
+}
+
+Cat::Cat(Cat const &other) : Animal(&other)
+{
+    this->setType(other->getType());
+    std::cout << "a cat appeared!" << std::endl;
     return ;
 }
 

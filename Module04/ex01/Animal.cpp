@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:22:57 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 20:54:49 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:14:23 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@ Animal::Animal()
     this->setType("EMPTY");
     std::cout << "an animal has appeared!" << std::endl;
     Animal::brain = new Brain();
+    return ;
+}
+Animal::Animal(Animal const &other)
+{
+    this->setType(other->getType());
+    this->brain = other->brain;
+    std::cout << "an animal has appeared!" << std::endl;
     return ;
 }
 

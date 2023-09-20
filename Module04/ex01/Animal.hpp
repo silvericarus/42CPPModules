@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:16:09 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 20:55:13 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/20 19:13:50 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Animal
     public:
         Brain *brain;
         Animal();
+        Animal(Animal const &);
         ~Animal();
         Animal &operator=(const Animal &animal);
         std::string getType();
