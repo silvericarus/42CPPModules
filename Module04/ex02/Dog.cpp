@@ -6,7 +6,7 @@
 /*   By: albgonza <albgonza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 18:46:32 by albgonza          #+#    #+#             */
-/*   Updated: 2023/09/19 21:09:30 by albgonza         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:05:25 by albgonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,15 @@ Dog::Dog()
     instance.setType("DOG");
     std::cout << "a dog appeared!" << std::endl;
     Dog::brain = new Brain();
+    return ;
+}
+
+Dog::Dog(Dog const &other)
+{
+    Animal& instance = Animal::getInstance();
+    instance.setType(other->getType());
+    std::cout << "a dog appeared!" << std::endl;
+    Dog::brain = other->brain;
     return ;
 }
 

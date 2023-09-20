@@ -23,6 +23,7 @@ class WrongAnimal
     public:
         Brain   *brain;
         WrongAnimal();
+        WrongAnimal(WrongAnimal const &);
         ~WrongAnimal();
         WrongAnimal &operator=(const WrongAnimal &wronganimal);
         std::string getType();
