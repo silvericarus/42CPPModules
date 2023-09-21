@@ -21,7 +21,7 @@ Animal::Animal()
 
 Animal::Animal(Animal const &other)
 {
-    this->setType(other->getType());
+    this->setType(other.getType());
     std::cout << "an animal has appeared!" << std::endl;
     return ;
 }

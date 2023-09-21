@@ -23,7 +23,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	return ;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &scavtrap)
+ScavTrap::ScavTrap(const ScavTrap &scavtrap) : ClapTrap(scavtrap)
 {
 	*this = scavtrap;
 	return ;

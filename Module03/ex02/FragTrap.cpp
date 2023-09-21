@@ -22,7 +22,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	return ;
 }
 
-FragTrap::FragTrap(const FragTrap &fragtrap)
+FragTrap::FragTrap(const FragTrap &fragtrap) : ClapTrap(fragtrap)
 {
 	*this = fragtrap;
 	return ;

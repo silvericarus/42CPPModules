@@ -15,7 +15,7 @@ SRCS 		=	\
 			Fixed.hpp \
 			Point.cpp \
 			Point.hpp \
-			bsp.cpp \
+			Bsp.cpp \
 			main.cpp \
 
 OBJS		=	$(SRCS:.cpp=.o)
